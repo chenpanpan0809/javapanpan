@@ -14,6 +14,8 @@
 	import java.io.Writer;
 
 	public class FileDemo {
+		private static boolean ture;
+
 		public static void main(String[] args) throws IOException {
 			// TODO Auto-generated method stub
 			PrintStream out = System.out;
@@ -28,7 +30,7 @@
 				out.println("文件已存在");
 			}*/
 			
-			OutputStream file1 = new FileOutputStream(file, false);
+			OutputStream file1 = new FileOutputStream(file, ture);
 			Writer writer2 = new OutputStreamWriter(file1, "GBK");
 			String  title1 = "这是一个java上机题的文档文件\r\n";
 			String  title2 = "一个正整数，它加上100后是一个完全平方数，再加上168又是一个完全平方数，请问该数是多少\r\n";
@@ -58,14 +60,16 @@
 			out.print("读取当前的内容是："+new String(bytes4));
 			
 			
-			byte[]shuju =new byte[title4.getBytes().length];
+			String regex = "\\D+";//正则表达式的用法
+			out.println("读取当行有需要的参数，参数为："+title4.replaceAll(regex, "\t"));
+
+			/*byte[]shuju =new byte[title4.getBytes().length];
 			reader.read(bytes4);//读取需要的参数，这里自己看提供的方法，提取需要的数据，排除#号
 			String num1,num2;
 			num1=new String(bytes4).substring(4, 7);
 			num2=new String(bytes4).substring(8, 12);
-			out.println("读取当行有需要的参数，参数为："+new String(bytes4).substring(0, 3)+"\t"+num1+" "+num2);
+			out.println("读取当行有需要的参数，参数为："+new String(bytes4).substring(0, 3)+"\t"+num1+" "+num2);*/
 			in.close();
-			out.println("不在读取当前文件，读取配置文件的方法退出");
 			
 			
 			out.println();
