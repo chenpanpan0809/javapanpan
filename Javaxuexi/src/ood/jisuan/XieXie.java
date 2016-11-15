@@ -5,23 +5,17 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.lang.reflect.Method;
 
 public class XieXie {
 
-	public  static void xie() throws IOException{
+	public  static void xie() throws IOException, Exception{
 	
-	File file = new File("d:\\demo1\\2.txt");
-	File parentpath = file.getParentFile();
-	if (!parentpath.exists()) {
-		System.out.println("创建父路径"+parentpath.mkdirs());
-	}
-	if (!file.exists()) {
-		System.out.println("创建文件"+file.createNewFile());
-	}
-	OutputStream file1 = new FileOutputStream(file, true);
-	java.io.Writer writer = new OutputStreamWriter(file1, "GBK");
-	writer.write("黄鹏");
-	writer.close();
-	
+		
+		Class<?> demo =null;
+		demo = Class.forName("ood.jisuan.JiSuan2");
+		
+	 Method method = demo.getMethod("Cale(int num1, int num2)");
+		method.invoke(demo.newInstance());
 	}
 }
