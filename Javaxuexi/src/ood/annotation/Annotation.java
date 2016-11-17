@@ -8,6 +8,7 @@ import java.lang.annotation.Target;
 //自定义注解
 @Retention(RUNTIME)
 @Target(FIELD)
+
 public @interface Annotation {
 		public String name() default "add";
 }
