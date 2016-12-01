@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+</script>
+</head>
+<body>
+<div id="src"><i>java从入门到精通</i></div>
+<div >java web 开发实战经典</div>
+<div id="des"></div>
+<ul>
+<li class="location">北京</li>
+<li>上海</li>
+<li>武汉</li>
+<li>天津</li>
+</ul>
+
+
+<script type="text/javascript">
+$("div").css('border','1px solid red ' ).css('text-align','center');
+$("#des").html($("#src").html());
+$(".location").css('color','red').css('text-align','center');
+</script>
+
+
+
+</body>
+</html>

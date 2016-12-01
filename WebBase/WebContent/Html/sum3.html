@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+</script>
+<script type="text/javascript" id="hidden">
+	function HP() {
+		document.write("<table border=\"1\">");
+		for (i = 1; i <= 9; i++) {
+			document.write("<tr>");
+			for (j = 1; j <= 9; j++) {
+				if (j <= i) {
+					document.write("<td>" + i + "*" + j + "=" + i * j + "</td>");
+				} else {
+					document.write("<td>&nbsp;</td>");
+				}
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+
+	}
+	</script>
+	
+</head>
+<body>
+
+</body>
+</html>

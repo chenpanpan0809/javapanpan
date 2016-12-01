@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+</script>
+</head>
+<body>
+<h3 style="text-align: center;">九九乘法表</h3>
+<hr/>
+<button type="button" onclick="HP()">打印乘法表</button>
+<hr id="tb" />
+<script type="text/javascript">
+	function HP() {
+		var sheet = ("<table border=\"1\" >");
+		for (i = 1; i <= 9; i++) {
+			sheet+=("<tr>");
+			for (j = 1; j <=9; j++) {
+				if (j <= i) {
+					sheet+=("<td>" + i + "*" + j + "=" + i * j + "</td>" );
+				} else {
+					sheet+=("<td>&nbsp;</td>");
+					
+				}
+			}
+			sheet+=("<td>"+i*j+"<td/>");
+			sheet+=("</tr>");
+			//sheet+=("</tr>"+i*j+"<tr/>");
+			
+		}
+	
+		var shteets = ("</table>");
+		$("#tb").append(sheet,shteets);
+	
+		
+	}
+	</script>
+</body>
+</html>

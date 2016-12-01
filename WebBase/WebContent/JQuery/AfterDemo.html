@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../JQuery/123.js"></script>
+</head>
+<body>
+	<p id="af">java从入门到精通</p>
+	<p>点我</p>
+	<p>再点我</p>
+	<p>再来点我</p>
+	<input type="button" value="afterDemo" onclick="afterDemo()">
+	<script type="text/javascript">
+		function afterDemo() {
+			$('#af').after("<p>javaweb语言</p>");
+
+		}
+		/* $(document).ready(function() {
+			$("p").click(function() {
+				$(this).hide();
+
+			});
+		}); */
+
+		   $("p").click(function(){
+		    $(this).hide();
+		  });
+		
+	</script>
+
+</body>
+</html>

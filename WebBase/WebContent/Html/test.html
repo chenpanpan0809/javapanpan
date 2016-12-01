@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"><SCRIPT LANGUAGE="JavaScript">
+</head>
+<body>
+function frameNavig() {
+frames['right'].window.location="9-1-1.htm";
+
+	document.write("<table border=\"1\">");
+	for (i = 1; i <= 9; i++) {
+		document.write("<tr>");
+		for (j = 1; j <= 9; j++) {
+			if (j <= i) {
+				document
+						.write("<td>" + i + "*" + j + "=" + i * j + "</td>");
+			} else {
+				document.write("<td>&nbsp;</td>");
+			}
+		}
+		document.write("</tr>");
+	}
+	document.write("</table>");
+}//在名字为'right'的frame中打开9-1-2.htm
+function frameNavig2() {
+frames['right'].window.location="9-1-2.htm";
+}// End -->
+</SCRIPT>
+<frameset rows="10%,10%,*" framespacing=0>
+<frame name="top" src="top.htm" noresize>
+<frame name="middle" src="middle.htm">
+<frame name="bottom" src="bottom.htm">
+</frameset>
+<noframes></noframes>
+</head>
+</html>    <html>
+<head>
+<title>left.htm</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+</head>
+<body bgcolor="#FFFFFF">
+<form name="">
+<button type=button value="open 9-1-1.htm" OnClick="parent.frameNavig()"/>
+<br>
+<button type=button value="open 9-1-2.htm" OnClick="parent.frameNavig2()"/>
+</form>
+</body>
+</html>

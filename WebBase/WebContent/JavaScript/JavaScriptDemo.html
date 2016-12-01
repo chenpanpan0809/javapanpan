@@ -4,16 +4,20 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript"  >
-function name(){
-	alert("hello word");
+function nameDemo(){
+	name1();
+}
+function name1(){
+	document.write("hello word"+"<br/>");
+	name2();
 }
 function name2() {
-	window.close();
+	document.write("hi");
 }
 </script>
 </head>
 <body>
-<input name="name" type="button"  onclick="name2()"value="点击关闭">
-<a href="javascript:self.close()"></a>
+<input name="name" type="button"  onclick="name1()"value="点">
+
 </body>
 </html>
