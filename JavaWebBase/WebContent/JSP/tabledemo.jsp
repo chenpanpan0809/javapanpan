@@ -7,9 +7,22 @@
 <title>Insert title here</title>
 </head>
 <body>
-<% out.println("<h2>hello word<h2>"); 
-out.println(request.getRemoteAddr());
-
+<%
+int rows =10,cols =10;
+out.println("<table border=1px;color:pink;>");
+for(int x = 1;x<rows;x++){
+	out.println("<tr>");
+	for(int y= 1;y<cols;y++){
+		if(y<=x){
+			out.println("<td>"+y+"*"+x+"="+(x*y)+"</td>");
+		}
+		 else{
+			out.println("<td></td>");
+		}
+	}
+	out.println("</tr>");
+}
+out.println("</table>");
 %>
 </body>
 </html>
