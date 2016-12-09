@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js">
+	
+</script>
+<script type="text/javascript">
+	function HP() {
+		var num = ("<table border=1px  id='hpdemo'>");
+		for (i = 1; i <= 9; i++) {
+			num += ("<tr>");
+			var sum = 0;
+			for (j = 1; j <= 9; j++) {
+				if (j <= i) {
+					num += ("<td>" + j + "*" + i + "=" + i * j + "</td>");
+					sum += i * j;
+				} else {
+					num += ("<td>&nbsp;</td>");
+				}
+			}
+			num += ("<td style='visibility:hidden;border:1px' class='yueyue'>" + "和="
+					+ sum + "</td>");
+			num += ("</tr>");
+		}
+		num += ("<tr>")
+		for (x = 1; x <= 9; x++) {
+			var sum1 = 0;
+			for (y = x; y < 10; y++) {
+				sum1 += (x * y);
+			}
+			num += ("<td style='visibility:hidden;border:1px ' class='yueyue' >" + "和="+ sum1 + "</td>");
+		}
+		num += ("</tr>")
+		var tablehp = ("</table>");
+		$("#hp1").append(num, tablehp);
+
+	}
+</script>
+<script type="text/javascript">
+	function showDemo() {
+		$(".yueyue").removeAttr("style")
+	}
+</script>
+<script type="text/javascript">
+	function tablestyle() {
+		with($('#hpdemo')){
+			css('color', 'red');
+			
+			css('background-color', 'lightblue');
+			attr('border', '1').attr('border','solid 100px')
+			attr('cellspacing', '0');
+			
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<p style="text-align: center; color: blue; font-size: 20px;">九九乘法</p>
+	<hr/>
+	<table width="500" border="0" align="center">
+		<tr>
+			<td style="width: 200px;height: 200px;"><input type="button" value="九九乘法表"
+				onclick="HP()" style="width: 150px" /></td>
+			<td style="width: 200px;height: 200px;"><input type="button" value="统计"
+				onclick="showDemo()" style="width: 150px" /></td>
+			<td id="tablestyle" width="200px" scope="col"><input type="button"
+				value="样式" onclick="tablestyle()" style="width: 150px" /></td>
+		</tr>
+	</table>
+	<br />
+	<hr id="hp1" />
+</body>
+</html>
