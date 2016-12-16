@@ -10,7 +10,6 @@
 <%
 session.setAttribute("location", "合肥");
 session.setAttribute("name", "panpan");
-
 %>
 
 <!-- <a href="receiveRequest.jsp"><button type="button" >跳转</button> </a>
