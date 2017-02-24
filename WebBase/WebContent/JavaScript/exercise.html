@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="demo" style="color: red;"><b>这是演示</b></p>
+<img alt="" src="../image/024.jpg" id="ok">
+<script type="text/javascript">
+var x =document.getElementById("demo");
+document.write("<p>文本后面有一个内容:"+x.innerText+"</p>");
+document.write(new Date());
+function name1() {
+	document.getElementById("ok").src="../image/t012c063db552ab2d6c.jpg"
+}
+/* ajax的应用 */
+</script>
+<script type="text/javascript">
+var request = false;
+try {
+  request = new XMLHttpRequest();
+} catch (trymicrosoft) {
+  try {
+    request = new ActiveXObject("Msxml2.XMLHTTP");
+  } catch (othermicrosoft) {
+    try {
+      request = new ActiveXObject("Microsoft.XMLHTTP");
+    } catch (failed) {
+      request = false;
+    }
+  }
+}
+
+if (!request)
+  alert("Error initializing XMLHttpRequest!");
+</script>
+<button type="button" onclick="name1()">点击改变图片</button>
+</body>
+</html>
